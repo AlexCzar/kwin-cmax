@@ -1,0 +1,20 @@
+[tasks.build]
+description = "Build the kwinscript package"
+run = """
+mkdir -p target
+zip -r target/kwin-cmax.kwinscript contents metadata.json
+"""
+depends = ["clean"]
+
+[tasks.install]
+description = "Install the kwinscript package"
+run = "plasmapkg2 --type kwinscript -i target/kwin-cmax.kwinscript"
+depends = ["build"]
+
+[tasks.clean]
+description = "Remove files from the target directory"
+run = "rm -f target/*"
+
+[tasks.uninstall]
+description = "Uninstall the kwinscript package"
+run = "plasmapkg2 --type kwinscript -r kwin-cmax"

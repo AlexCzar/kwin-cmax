@@ -1,0 +1,22 @@
+{
+    "KPlugin": {
+        "Name": "KwinCMax",
+        "Description": "Centers and [almost] maximises the active window",
+        "Icon": "preferences-system-windows",
+        
+        "Authors": [
+            {
+                "Email": "AlexCzar@users.noreply.github.com",
+                "Name": "Alex Czar"
+            }
+        ],
+        "Id": "kwin-cmax",
+        "Version": "1.0",
+        "License": "Apache 2.0",
+        "Website": "https://github.com/AlexCzar/kwin-cmax"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}
+
