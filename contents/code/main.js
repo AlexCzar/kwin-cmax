@@ -1,10 +1,10 @@
 function almost_maximise(margin_v, margin_h) {
-    const client = workspace.activeClient;
+    const client = workspace.activeWindow;
     if (client.moveable) {
         const maxArea = workspace.clientArea(KWin.MaximizeArea, client);
         const newWidth = maxArea.width - (margin_h || margin_v);
         const newHeight = maxArea.height - margin_v;
-        client.geometry = {
+        client.frameGeometry = {
             x: maxArea.x + (maxArea.width - newWidth) / 2,
             y: maxArea.y + (maxArea.height - newHeight) / 2,
             width: newWidth,
@@ -25,3 +25,4 @@ registerShortcut(
     "Meta+Shift+Up",
     () => { almost_maximise(200, 600); }
 );
+
