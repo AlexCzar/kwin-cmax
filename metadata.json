@@ -3,7 +3,7 @@
         "Name": "KwinCMax",
         "Description": "Centers and [almost] maximises the active window",
         "Icon": "preferences-system-windows",
-        
+
         "Authors": [
             {
                 "Email": "AlexCzar@users.noreply.github.com",
